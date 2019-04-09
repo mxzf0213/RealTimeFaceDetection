@@ -1,6 +1,8 @@
 # RealTimeFaceDetection
 基于YOLO-lite的web实时人脸检测（2.2MB大小，10FPS）
 
+> 注：只需下载model文件夹以及index.html,main.js，置于同一目录下，再打开index.html即可实现Demo的效果。
+
 Demo地址：[RealTimeFaceDetection](https://mxzf0213.github.io/RealTimeFaceDetection/)
 
 效果展示：
