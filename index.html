@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>基于YOLO-LITE的实时人脸检测</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest tensorflowjs-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+    <style>
+        .centered {
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info" style='display:none'>
+    </div>
+    <div id='main'>
+        <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        display: none;
+        ">
+        </video>
+        <canvas id="output" class="centered" />
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
