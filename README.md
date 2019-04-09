@@ -43,6 +43,9 @@ Yolo-lite的效果在只有CPU环境下能够达到10FPS左右，在GPU环境下
 7. [js编写对模型输出解码](#7)
 
 <h2 id="1">数据准备、处理
+
+
+
 本项目从kaggle网站上下载人脸数据，共包含408张图片，每张图片包含若干张人脸，以及人脸矩形框信息。
 
 下载位置：[Face Detection in Images](https://www.kaggle.com/dataturks/face-detection-in-images)
@@ -65,6 +68,7 @@ py文件位置：`faceData/process.py`
 这样我们的数据就准备好了！
 
 <h2 id="2">darknet框架准备以及相关文件设置
+
 
 darknet框架下载位置：[darknet](https://github.com/pjreddie/darknet)
 
@@ -97,6 +101,7 @@ cfg文件我们需要做一些改动以便适应我们的训练：
 
 <h2 id="3">GPU环境下训练
 
+
 本项目训练运行在Google的免费GPU云环境中，其中已经内置好了CUDA，位置为`/usr/local`。
 
 云环境位置：[colab](http://colab.research.google.com/)，新建.ipynb文件后需要设置笔记本为GPU运行，具体选项为[修改]->[笔记本设置]->[硬件加速器]->[GPU]。
@@ -104,6 +109,7 @@ cfg文件我们需要做一些改动以便适应我们的训练：
 .ipynb文件位于项目目录下的colabFace.ipynb，仅供参考，可以根据自己需要修改。
 
 <h2 id="4">测试Yolo-lite模型
+
 
 测试Yolo-lite模型可根据开头的终端命令行进行测试。
 
@@ -126,6 +132,8 @@ OPENCV的安装可参考网上博客教程，这里不再赘述。
 
 <h2 id="5">将cfg和weights文件转化为.h5文件并测试</h2>
 
+
+
 需要提前下载好yad2k转化包以及keras。
 
 yad2k下载位置：[yad2k](https://github.com/allanzelener/YAD2K)
@@ -138,6 +146,8 @@ keras通过pip安装。
 
 <h2 id="6">利用tensorflowjs_converter将.h5文件转化为JavaScript</h2>
 
+
+
 需要提前安装keras、tensorflow、tensorflowjs，使用pip安装即可。
 
 转换命令：
@@ -145,6 +155,8 @@ keras通过pip安装。
 `tensorflowjs_converter --input_format keras yolo-lite.h5 tfjs_model_data`
 
 <h2 id="7">js编写对模型输出解码</h2>
+
+
 
 由于yolo-lite模型转换到.h5文件后已经丢失了detection(REGION层)，所以需要对输出的tensor[7,7,30]进行解码，在js文件中我们需要自己编写解码部分，可以参照darknet框架和yad2k的test_yolo.py。
 
