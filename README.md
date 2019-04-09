@@ -31,7 +31,7 @@ Yolo-lite的效果在只有CPU环境下能够达到10FPS左右，在GPU环境下
 
 总的来说，Yolo-lite是一个很好的实时多目标检测模型。
 
-<h2>项目流程目录
+<h2>项目流程目录</h2>
 
 
 1. [数据准备、处理](#1)
@@ -42,9 +42,7 @@ Yolo-lite的效果在只有CPU环境下能够达到10FPS左右，在GPU环境下
 6. [利用tensorflowjs_converter将.h5文件转化为JavaScript](#6)
 7. [js编写对模型输出解码](#7)
 
-<h2 id="1">数据准备、处理
-
-
+<h2 id="1">数据准备、处理</h2>
 
 本项目从kaggle网站上下载人脸数据，共包含408张图片，每张图片包含若干张人脸，以及人脸矩形框信息。
 
@@ -67,7 +65,7 @@ py文件位置：`faceData/process.py`
 
 这样我们的数据就准备好了！
 
-<h2 id="2">darknet框架准备以及相关文件设置
+<h2 id="2">darknet框架准备以及相关文件设置</h2>
 
 
 darknet框架下载位置：[darknet](https://github.com/pjreddie/darknet)
@@ -99,7 +97,7 @@ cfg文件我们需要做一些改动以便适应我们的训练：
 
 设置好后需要进行重新编译，即`sudo make clean`,`sudo make all`
 
-<h2 id="3">GPU环境下训练
+<h2 id="3">GPU环境下训练</h2>
 
 
 本项目训练运行在Google的免费GPU云环境中，其中已经内置好了CUDA，位置为`/usr/local`。
@@ -108,7 +106,7 @@ cfg文件我们需要做一些改动以便适应我们的训练：
 
 .ipynb文件位于项目目录下的colabFace.ipynb，仅供参考，可以根据自己需要修改。
 
-<h2 id="4">测试Yolo-lite模型
+<h2 id="4">测试Yolo-lite模型</h2>
 
 
 测试Yolo-lite模型可根据开头的终端命令行进行测试。
