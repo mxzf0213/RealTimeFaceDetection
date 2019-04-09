@@ -140,6 +140,8 @@ keras通过pip安装。
 
 在使用yad2k.py文件转换前注意修改第83行，修改16 -> 20，原因未知。
 
+另外，还需修改第113行，改为batch_normalize = 0，以防止读取参数文件时部分参数被误读为BN层参数。
+
 测试时可参照开头的终端命令行运行。
 
 <h2 id="6">利用tensorflowjs_converter将.h5文件转化为JavaScript</h2>
