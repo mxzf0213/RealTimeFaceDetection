@@ -1,0 +1,6 @@
+classes = 1
+train  = /content/faceData/train.txt
+valid  = /content/faceData/test.txt
+names = /content/faceData/voc.names
+backup = /content/faceData/backup
+

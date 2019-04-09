@@ -1,0 +1,6 @@
+classes = 1
+train  = /home/dongyu/桌面/faceData/train.txt
+valid  = /home/dongyu/桌面/faceData/test.txt
+names = /home/dongyu/桌面/faceData/voc.names
+backup = /home/dongyu/桌面/faceData/backup
+
