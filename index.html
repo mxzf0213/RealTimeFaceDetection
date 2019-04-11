@@ -11,9 +11,14 @@
 
     <!-- Latest tensorflowjs-->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+
     <style>
         .centered {
-            margin: auto;
+            position: fixed;
+            left: 50%;
+            margin-left: -300px;
+            top: 50%;
+            margin-top: -250px;
             display: block;
         }
     </style>
@@ -32,6 +37,7 @@
         </video>
         <canvas id="output" class="centered" />
     </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <script src="main.js"></script>
 </body>
 
