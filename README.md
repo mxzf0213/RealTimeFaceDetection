@@ -29,7 +29,7 @@ Demo地址：[RealTimeFaceDetection](https://mxzf0213.github.io/RealTimeFaceDete
 
 相较于YoloV2模型，Yolo-lite做出的改动主要体现在将图片尺寸减半(从[416,416]到[224,224])，以及去掉BN层。具体可以参见[Yolo-lite论文](https://arxiv.org/pdf/1811.05588.pdf)。Yolo-lite从YoloV2中受到启发，所以更加详尽的原理描述建议看[YoloV2论文](https://arxiv.org/abs/1612.08242)。
 
-Yolo-lite的效果在只有CPU环境下能够达到10FPS左右，在GPU环境下达到30FPS左右。虽然Yolo-lite的检测速度相较之前的Yolo模型大大提升(得益于网络规模的削减和丢弃BN层)，但并没有进一步提升准确率(mAP)的措施，所以相应地准确率会有所下降，这点是毋庸置疑的。
+Yolo-lite的效果在只有CPU环境下能够达到10FPS左右，在GPU环境下达到30FPS左右(1392*782分辨率)。虽然Yolo-lite的检测速度相较之前的Yolo模型大大提升(得益于网络规模的削减和丢弃BN层)，但并没有进一步提升准确率(mAP)的措施，所以相应地准确率会有所下降，这点是毋庸置疑的。
 
 总的来说，Yolo-lite是一个很好的实时多目标检测模型。
 
